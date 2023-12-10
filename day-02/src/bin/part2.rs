@@ -16,7 +16,7 @@ fn main() {
 
 }
 
-pub fn parse(input: &str) -> Vec<Round> { // Final Outpout will be Result with Error and A Vect of Rounds
+pub fn parse(input: &str) -> Vec<Round> {
     let mut v: Vec<Round> = Vec::new();
     for line in input.lines(){
         let mut round = Round{
