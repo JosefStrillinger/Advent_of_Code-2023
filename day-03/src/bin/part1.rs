@@ -1,11 +1,11 @@
 fn main() {
-    let input = include_str!("input1.txt");
+    let input = include_str!("input.txt");
 
     let symbol_locations = parse_input_symbol_locations(input);
 
     println!("{:?}", symbol_locations);
 
-    let number_data = parse_input_number(input);
+    let number_data = parse_input_numbers(input);
     println!("{:?}", number_data);
 
     let solution = get_solution(&symbol_locations, &number_data);
@@ -26,7 +26,7 @@ fn parse_input_symbol_locations(input: &str) -> Vec<(i32, i32)> {
     output
 }
 
-fn parse_input_number(input: &str) -> Vec<(i32, i32, i32, i32)> {
+fn parse_input_numbers(input: &str) -> Vec<(i32, i32, i32, i32)> {
     let mut output = Vec::new();
     for (y, line) in input.lines().enumerate() {
         //println!("{} {}", y, line);
